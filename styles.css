@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Capital Circle Law Offices - Complete Design System & Multi-Page Styles
+   Capital Circle Law Offices - Design System & Stylesheet (Fixed Team Card)
    ========================================================================== */
 
 :root {
@@ -380,9 +380,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
-/* --------------------------------------------------------------------------
-   Hero Section with Grand HD Building & Metallic Ring (image copy 5.png)
-   -------------------------------------------------------------------------- */
+/* Hero Section */
 .hero-section {
     position: relative;
     padding: 70px 0 90px 0;
@@ -432,7 +430,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
 }
 
-/* Grand HD Hero Visual Box */
 .hero-visual {
     position: relative;
     display: flex;
@@ -463,7 +460,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.04);
 }
 
-/* Animated Floating Metallic Gold Ring Accent */
 .animated-gold-ring-overlay {
     position: absolute;
     top: 30px;
@@ -487,7 +483,6 @@ h1, h2, h3, h4, h5, h6 {
     100% { transform: translateY(-12px) rotate(-10deg); }
 }
 
-/* Floating "Who We Are" Card */
 .who-we-are-container {
     max-width: 1240px;
     margin: -50px auto 0 auto;
@@ -681,7 +676,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.7;
 }
 
-/* Orbit Graphic */
 .orbit-container {
     position: relative;
     width: 240px;
@@ -745,9 +739,7 @@ h1, h2, h3, h4, h5, h6 {
 .node-bottom { bottom: 0; left: calc(50% - 22px); }
 .node-left { left: 0; top: calc(50% - 22px); }
 
-/* --------------------------------------------------------------------------
-   Founder Section with HD Photograph of Adv. Yeshwanth Thandra (image copy 3.png)
-   -------------------------------------------------------------------------- */
+/* Founder Section */
 .founder-section {
     background-color: #FFFFFF;
 }
@@ -852,7 +844,9 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-muted);
 }
 
-/* Our Team Section */
+/* --------------------------------------------------------------------------
+   STRICTLY FIXED OUR TEAM CARDS LAYOUT (Prevents Image Overlapping Name)
+   -------------------------------------------------------------------------- */
 .team-section {
     background-color: var(--color-bg-light);
 }
@@ -871,6 +865,9 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-smooth);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .team-card:hover {
@@ -881,9 +878,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .team-img-box {
     width: 100%;
-    height: 240px;
-    background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+    height: 280px;
+    background: linear-gradient(180deg, #0A2540 0%, #031628 100%);
     overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .team-photo-img {
@@ -891,39 +893,53 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-fit: cover;
     object-position: top center;
+    display: block;
     transition: transform var(--transition-smooth);
 }
 
 .team-card:hover .team-photo-img {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .team-details {
     padding: 24px;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .team-name {
-    font-size: 1.4rem;
+    font-family: var(--font-heading);
+    font-size: 1.55rem;
+    font-weight: 700;
     color: var(--color-navy-dark);
     margin-bottom: 4px;
+    line-height: 1.2;
+    display: block;
 }
 
 .team-role {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     font-weight: 700;
     color: var(--color-gold-dark);
     margin-bottom: 12px;
+    display: block;
 }
 
 .team-desc {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     color: var(--color-text-muted);
     margin-bottom: 18px;
+    line-height: 1.5;
 }
 
 .team-socials {
     display: flex;
     gap: 12px;
+    margin-top: auto;
 }
 
 .social-icon {
