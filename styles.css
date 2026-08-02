@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Capital Circle Law Offices - Complete Design System (Expanded Hero Visual)
+   Capital Circle Law Offices - Complete Design System (Seamless Sky Blend Hero)
    ========================================================================== */
 
 :root {
@@ -191,10 +191,10 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(247, 249, 252, 0.94);
+    background-color: rgba(235, 244, 252, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    border-bottom: 1px solid rgba(210, 225, 238, 0.7);
     transition: all var(--transition-fast);
 }
 
@@ -381,12 +381,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
-   EXPANDED HERO SECTION (Full Height Cover Visual, Zero Blank Padding)
+   SEAMLESS SKY BLEND HERO SECTION (Box Line Removed, Pure HD Clarity)
    -------------------------------------------------------------------------- */
 .hero-section {
     position: relative;
-    padding: 40px 0 90px 0;
-    background: linear-gradient(180deg, #F4F8FC 0%, #E2ECF5 50%, #CBDCEB 100%);
+    padding: 50px 0 90px 0;
+    background: linear-gradient(180deg, #EBF4FC 0%, #DCECF8 50%, #C8E0F2 100%);
     overflow: hidden;
 }
 
@@ -395,16 +395,18 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     gap: 40px;
 }
 
 .hero-content {
-    padding: 40px 20px 40px 0;
+    padding: 20px 20px 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 5;
 }
 
 .hero-title {
@@ -435,54 +437,55 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
 }
 
-/* Fully Expanded Hero Visual Frame */
+/* Seamless Sky Hero Visual (No Box Lines, No Border, Pure HD Image) */
 .hero-visual {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 580px;
+    min-height: 560px;
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
 }
 
 .grand-hero-frame {
     width: 100%;
     height: 100%;
-    min-height: 580px;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: 0 25px 60px rgba(3, 22, 40, 0.22);
+    min-height: 560px;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+    border: none;
+    background: transparent;
     position: relative;
-    background: linear-gradient(180deg, #D0E3F3 0%, #A6C8E6 100%);
-    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .grand-hero-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    object-fit: contain;
+    object-position: center right;
     display: block;
-    transition: transform 6s ease-in-out;
-}
-
-.grand-hero-frame:hover .grand-hero-img {
-    transform: scale(1.05);
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    image-rendering: -webkit-optimize-contrast;
+    filter: drop-shadow(0 20px 40px rgba(10, 37, 64, 0.12));
 }
 
 .animated-gold-ring-overlay {
     position: absolute;
-    top: 40px;
-    right: 40px;
-    width: 280px;
-    height: 280px;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     border: 16px solid transparent;
     border-top: 16px solid #D4AF37;
     border-right: 16px solid #C59B27;
     border-bottom: 16px solid #F5E8C7;
     border-left: 16px solid #AA7C11;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25), inset 0 0 20px rgba(255, 255, 255, 0.4);
     pointer-events: none;
     transform: rotate(-15deg);
     animation: floatRing 6s ease-in-out infinite alternate;
