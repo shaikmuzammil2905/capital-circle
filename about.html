@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Capital Circle Law Offices</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header" id="siteHeader">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-main">CAPITAL CIRCLE</span>
+                <span class="logo-sub"><span class="line"></span>LAW OFFICES<span class="line"></span></span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About Us</a>
+                <a href="practice-areas.html" class="nav-link">Practice Areas</a>
+                <a href="founder.html" class="nav-link">Founder</a>
+                <a href="team.html" class="nav-link">Our Team</a>
+                <a href="why-us.html" class="nav-link">Why Choose Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-primary cta-btn open-modal" data-modal="consultationModal">Book Consultation</button>
+                <button class="mobile-toggle-btn" id="mobileToggleBtn"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <div class="brand-logo"><span class="logo-main">CAPITAL CIRCLE</span><span class="logo-sub"><span class="line"></span>LAW OFFICES<span class="line"></span></span></div>
+            <button class="close-drawer-btn" id="closeDrawerBtn">&times;</button>
+        </div>
+        <div class="drawer-content">
+            <a href="index.html" class="drawer-link">Home</a>
+            <a href="about.html" class="drawer-link">About Us</a>
+            <a href="practice-areas.html" class="drawer-link">Practice Areas</a>
+            <a href="founder.html" class="drawer-link">Founder</a>
+            <a href="team.html" class="drawer-link">Our Team</a>
+            <a href="why-us.html" class="drawer-link">Why Choose Us</a>
+            <a href="contact.html" class="drawer-link">Contact Us</a>
+            <button class="btn btn-primary full-width open-modal" data-modal="consultationModal">Book Consultation</button>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <section class="page-hero-banner">
+        <div class="section-container">
+            <h1 class="page-hero-title">About Capital Circle Law Offices</h1>
+            <p class="page-hero-subtitle">Tradition Meets Legal Innovation</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-container">
+            <div class="who-we-are-card">
+                <span class="eyebrow-text">WHO WE ARE</span>
+                <h2 class="card-title">A New Generation Law Firm</h2>
+                <p class="card-desc">
+                    Capital Circle Law Offices is a dynamic and innovative law firm established to cater to the evolving needs of the financial and corporate sectors. The firm combines traditional legal expertise with modern technology to deliver high-quality legal solutions.
+                </p>
+
+                <div class="pillars-grid">
+                    <div class="pillar-item">
+                        <div class="pillar-icon-box">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <h3 class="pillar-title">Client Focused</h3>
+                        <p class="pillar-text">Building lasting relationships through deep commitment.</p>
+                    </div>
+
+                    <div class="pillar-item">
+                        <div class="pillar-icon-box">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M12 3v18M3 7l9-4 9 4M3 7l3 9a3 3 0 0 0 6 0L9 7M15 7l3 9a3 3 0 0 0 6 0l-3-9"/>
+                            </svg>
+                        </div>
+                        <h3 class="pillar-title">Strategic Solutions</h3>
+                        <p class="pillar-text">Tailored legal strategies that deliver measurable results.</p>
+                    </div>
+
+                    <div class="pillar-item">
+                        <div class="pillar-icon-box">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="pillar-title">Ethical & Trusted</h3>
+                        <p class="pillar-text">Upholding integrity in every client engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Capital Circle Law Offices. Founder: Adv. Yeshwanth Thandra. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP MODALS -->
+    <div class="modal-backdrop" id="consultationModal">
+        <div class="modal-dialog">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header"><h3 class="modal-title">Book Consultation</h3></div>
+            <form class="modal-form" id="consultationForm">
+                <div class="form-group"><label>Full Name *</label><input type="text" required placeholder="Your Full Name"></div>
+                <div class="form-group"><label>Phone Number *</label><input type="tel" required placeholder="+91 98765 43210"></div>
+                <button type="submit" class="btn btn-primary full-width">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" id="successModal">
+        <div class="modal-dialog text-center">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Inquiry Submitted</h3>
+            <button class="btn btn-primary close-modal-btn">Done</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
