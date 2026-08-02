@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Capital Circle Law Offices - Complete Design System (Seamless Sky Blend Hero)
+   Capital Circle Law Offices - Complete Design System (Spacious Layout Fix)
    ========================================================================== */
 
 :root {
@@ -171,6 +171,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     border-radius: var(--radius-full);
     box-shadow: 0 8px 25px rgba(3, 22, 40, 0.25);
+    margin-bottom: 20px;
 }
 
 .btn-hero:hover {
@@ -381,11 +382,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
-   SEAMLESS SKY BLEND HERO SECTION (Box Line Removed, Pure HD Clarity)
+   HERO SECTION (Clean Spacing Between Button & Who We Are Card)
    -------------------------------------------------------------------------- */
 .hero-section {
     position: relative;
-    padding: 50px 0 90px 0;
+    padding: 50px 0 60px 0;
     background: linear-gradient(180deg, #EBF4FC 0%, #DCECF8 50%, #C8E0F2 100%);
     overflow: hidden;
 }
@@ -404,6 +405,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 20px 20px 0;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
     z-index: 5;
@@ -432,17 +434,16 @@ h1, h2, h3, h4, h5, h6 {
 .hero-subtitle {
     font-size: 1.2rem;
     color: var(--color-text-body);
-    margin-bottom: 36px;
+    margin-bottom: 32px;
     max-width: 500px;
     line-height: 1.6;
 }
 
-/* Seamless Sky Hero Visual (No Box Lines, No Border, Pure HD Image) */
 .hero-visual {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 560px;
+    min-height: 540px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -451,7 +452,7 @@ h1, h2, h3, h4, h5, h6 {
 .grand-hero-frame {
     width: 100%;
     height: 100%;
-    min-height: 560px;
+    min-height: 540px;
     border-radius: 0;
     overflow: visible;
     box-shadow: none;
@@ -477,8 +478,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     border: 16px solid transparent;
     border-top: 16px solid #D4AF37;
@@ -496,9 +497,10 @@ h1, h2, h3, h4, h5, h6 {
     100% { transform: translateY(-14px) rotate(-10deg); }
 }
 
+/* Who We Are Container - Clear Spacing (No Overlap with Hero CTA) */
 .who-we-are-container {
     max-width: 1240px;
-    margin: -50px auto 0 auto;
+    margin: 40px auto 0 auto;
     padding: 0 24px;
     position: relative;
     z-index: 10;
@@ -507,7 +509,7 @@ h1, h2, h3, h4, h5, h6 {
 .who-we-are-card {
     background-color: #FFFFFF;
     border-radius: var(--radius-lg);
-    padding: 40px 48px;
+    padding: 44px 48px;
     box-shadow: 0 20px 50px rgba(10, 37, 64, 0.08);
     border: 1px solid rgba(226, 232, 240, 0.8);
     text-align: center;
@@ -527,7 +529,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pillars-grid {
-    display: grid;
+    display grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
 }
@@ -1447,6 +1449,10 @@ h1, h2, h3, h4, h5, h6 {
     .grand-hero-frame {
         min-height: 400px;
         height: 400px;
+    }
+
+    .who-we-are-container {
+        margin-top: 30px;
     }
 
     .who-we-are-card {
