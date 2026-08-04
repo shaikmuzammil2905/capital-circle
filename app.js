@@ -320,4 +320,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mainContactForm) mainContactForm.addEventListener('submit', handleFormSubmit);
     if (consultationForm) consultationForm.addEventListener('submit', handleFormSubmit);
 
+    /* --------------------------------------------------------------------------
+       8. Scroll Reveal Observer for Animations
+       -------------------------------------------------------------------------- */
+    const revealElements = document.querySelectorAll('.reveal-on-scroll, section, .practice-card, .founder-card, .why-card');
+
+    if (revealElements.length > 0) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-revealed');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => {
+            el.classList.add('reveal-on-scroll');
+            revealObserver.observe(el);
+        });
+    }
+
 });
