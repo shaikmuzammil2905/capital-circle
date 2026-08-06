@@ -890,7 +890,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .team-img-box {
     width: 100%;
-    height: 280px;
+    height: 340px;
     background: linear-gradient(180deg, #0A2540 0%, #031628 100%);
     overflow: hidden;
     position: relative;
@@ -971,59 +971,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-gold-main);
 }
 
-/* Why Choose Us Grid */
-.why-us-section {
-    background-color: #FFFFFF;
-}
 
-.why-us-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-    overflow: hidden;
-    background-color: #FFFFFF;
-}
-
-.why-card {
-    padding: 40px 28px;
-    text-align: center;
-    border-right: 1px solid var(--color-border);
-    transition: background-color var(--transition-fast);
-}
-
-.why-card:last-child {
-    border-right: none;
-}
-
-.why-card:hover {
-    background-color: var(--color-bg-light);
-}
-
-.why-icon-box {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background-color: var(--color-bg-light);
-    color: var(--color-navy-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px auto;
-    border: 1px solid var(--color-border);
-}
-
-.why-title {
-    font-size: 1.3rem;
-    color: var(--color-navy-dark);
-    margin-bottom: 10px;
-}
-
-.why-desc {
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-}
 
 /* Counter Stats Section */
 .counter-section {
@@ -1482,18 +1430,7 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
 
-    .why-us-grid {
-        grid-template-columns: 1fr 1fr;
-    }
 
-    .why-card {
-        border-right: none;
-        border-bottom: 1px solid var(--color-border);
-    }
-
-    .why-card:nth-child(odd) {
-        border-right: 1px solid var(--color-border);
-    }
 
     .counter-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1528,13 +1465,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.8rem;
     }
 
-    .why-us-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .why-card {
-        border-right: none !important;
-    }
 
     .counter-grid {
         grid-template-columns: 1fr;

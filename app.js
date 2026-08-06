@@ -190,18 +190,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>His dual background in technology and law empowers him to decode complex financial algorithms, corporate structures, and white-collar fraud matters with extraordinary precision.</p>
             `
         },
-        'financial-lead': {
-            title: 'Senior CA & Insolvency Partner',
-            subtitle: 'Head of Insolvency & Forensic Accounting',
+        'bhavna-gopalan': {
+            title: 'Adv. Bhavna Gopalan',
+            subtitle: 'Advocate-on-Record, Supreme Court of India',
             content: `
-                <p>Fellow Chartered Accountant (FCA) with over 15 years of experience in corporate debt restructuring, financial forensic audits, and NCLT insolvency proceedings.</p>
+                <p>Advocate-on-Record with over 10 years of experience in Supreme Court litigation, commercial arbitration, intellectual property, insolvency, banking, and constitutional law. Regularly represents clients before the Supreme Court, High Courts, and various tribunals across India.</p>
             `
         },
-        'governance-lead': {
-            title: 'Lead Company Secretary (CS)',
-            subtitle: 'Head of Corporate Compliance',
+        'pdv-srikar': {
+            title: 'PDV Srikar',
+            subtitle: 'Advocate',
             content: `
-                <p>Certified Company Secretary specializing in MCA filings, SEBI listing regulations, startup board governance, and joint venture documentation.</p>
+                <p>Experienced Advocate practicing in civil, commercial, intellectual property, taxation, insolvency, and dispute resolution matters. Represents clients before District Courts, High Courts, Tribunals, NCLT, and the Supreme Court with practical and client-focused legal solutions.</p>
             `
         }
     };
