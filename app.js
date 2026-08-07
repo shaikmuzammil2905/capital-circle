@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* --------------------------------------------------------------------------
        8. Scroll Reveal Observer for Animations
        -------------------------------------------------------------------------- */
-    const revealElements = document.querySelectorAll('.reveal-on-scroll, section, .practice-card, .founder-card, .why-card');
+    const revealElements = document.querySelectorAll('.reveal-on-scroll, section:not(.page-hero-banner):not(.blog-article-section), .practice-card, .founder-card, .why-card');
 
     if (revealElements.length > 0) {
         const revealObserver = new IntersectionObserver((entries) => {
@@ -333,8 +333,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -40px 0px'
+            threshold: 0.05,
+            rootMargin: '50px 0px 50px 0px'
         });
 
         revealElements.forEach(el => {
