@@ -112,11 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
        -------------------------------------------------------------------------- */
     const practiceData = {
         'financial-frauds': {
-            title: 'Financial Frauds Investigation & Defense',
+            title: 'Financial Frauds',
             content: `
-                <p><strong>Capital Circle Law Offices</strong> provides legal representation for financial institutions, corporations, and individuals entangled in complex financial fraud allegations.</p>
+                <p>We have a dedicated team of legal experts who specialize in handling cases of financial fraud. Our attorneys are well-versed in identifying fraudulent activities and provide clients with the guidance necessary to navigate complex legal landscapes.</p>
                 <br>
-                <p><strong>Our Services Include:</strong></p>
+                <p><strong>Our Key Specializations Include:</strong></p>
                 <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8;">
                     <li>SFIO (Serious Fraud Investigation Office) inquiries</li>
                     <li>ED (Enforcement Directorate) PMLA proceedings</li>
@@ -126,11 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         'white-collar': {
-            title: 'White Collar Crimes Litigation',
+            title: 'White Collar Crimes',
             content: `
-                <p>Strategic criminal defense and corporate compliance advisory for directors, executives, and financial institutions.</p>
+                <p>Capital Circle Law Offices is adept at managing cases related to white collar crimes. Our experienced lawyers are equipped to handle intricate legal issues, ensuring that our clients receive the best possible defense and resolution strategies.</p>
                 <br>
-                <p><strong>Key Expertise:</strong></p>
+                <p><strong>Defense & Strategic Counsel:</strong></p>
                 <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8;">
                     <li>Bribery and anti-corruption compliance under PC Act</li>
                     <li>Embezzlement, forgery & insider trading defense</li>
@@ -140,37 +140,37 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         'insolvency': {
-            title: 'Insolvency & Bankruptcy (IBC) Matters',
+            title: 'Insolvency Matters',
             content: `
-                <p>In-depth representation before NCLT and NCLAT for Corporate Debtors, Financial Creditors, Operational Creditors, and Insolvency Professionals.</p>
+                <p>Navigating insolvency can be challenging for any organization. Our firm provides expert legal advice and representation in insolvency matters, assisting clients in restructuring their businesses and finding the most viable solutions during financial distress.</p>
                 <br>
-                <p><strong>Core Offerings:</strong></p>
+                <p><strong>IBC & Restructuring Services:</strong></p>
                 <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8;">
-                    <li>Section 7, 9 & 10 applications filing & defense</li>
-                    <li>Resolution plan formulation & compliance audit</li>
-                    <li>Debt restructuring & liquidation proceedings</li>
+                    <li>Section 7, 9 & 10 applications before NCLT</li>
+                    <li>Corporate Debt Restructuring & Resolution Plans</li>
+                    <li>Representation for Creditors and Corporate Debtors</li>
                 </ul>
             `
         },
         'governance': {
-            title: 'Corporate Governance & Regulatory Compliance',
+            title: 'Corporate Governance',
             content: `
-                <p>Ensuring robust legal governance frameworks, MCA compliance, and board-level risk management for corporate entities.</p>
+                <p>We understand the importance of sound corporate governance in ensuring the success and sustainability of any enterprise. Our firm offers comprehensive legal services aimed at enhancing corporate governance frameworks, ensuring compliance with regulatory standards, and fostering ethical business practices.</p>
                 <br>
-                <p><strong>Services Cover:</strong></p>
+                <p><strong>Governance Frameworks:</strong></p>
                 <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8;">
-                    <li>Board advisory & shareholder agreement drafting</li>
-                    <li>SEBI regulatory compliance & ROC audit defenses</li>
-                    <li>ESG and statutory policy implementation</li>
+                    <li>Board advisory & statutory MCA compliance</li>
+                    <li>SEBI regulatory compliance & ROC audit defense</li>
+                    <li>ESG and shareholder agreements</li>
                 </ul>
             `
         },
         'startup': {
-            title: 'Startup Advisory & Venture Growth',
+            title: 'Startup Advisory',
             content: `
-                <p>End-to-end legal support tailored for high-growth startups from incorporation to Series funding and exit strategies.</p>
+                <p>Capital Circle Law Offices offers specialized startup advisory services. We guide emerging ventures through incorporation, compliance, funding rounds, term sheet negotiations, and strategic growth.</p>
                 <br>
-                <p><strong>Key Advisory Areas:</strong></p>
+                <p><strong>Venture Legal Advisory:</strong></p>
                 <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8;">
                     <li>Entity structuring & founder vesting agreements</li>
                     <li>Term sheet, SHA, and SSA negotiations</li>
