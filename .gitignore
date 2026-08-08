@@ -7,6 +7,9 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Local Environment files
+.env
+
 # Temporary files
 *.tmp
 image copy*.png
