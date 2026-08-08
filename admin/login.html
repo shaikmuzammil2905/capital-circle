@@ -62,10 +62,17 @@
 
             const result = await window.CapitalCircleDB.authenticateAdmin(email, pass);
             if (result.success) {
-                showToast('Authentication successful. Redirecting...', 'success');
+                showToast('Authentication successful. Redirecting to Dashboard...', 'success');
                 setTimeout(() => {
-                    window.location.href = 'index.html';
-                }, 400);
+                    let path = window.location.pathname;
+                    if (path.includes('login.html')) {
+                        window.location.href = path.replace('login.html', 'index.html');
+                    } else if (path.endsWith('/login')) {
+                        window.location.href = path.replace('/login', '/index.html');
+                    } else {
+                        window.location.href = 'index.html';
+                    }
+                }, 300);
             } else {
                 errBox.innerText = result.message || 'Invalid credentials.';
                 errBox.style.display = 'block';

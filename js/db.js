@@ -12,10 +12,17 @@
 
     // Simple SHA-256 function for browser client authentication matching database
     async function sha256(message) {
-        const msgBuffer = new TextEncoder().encode(message);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        try {
+            if (window.crypto && window.crypto.subtle) {
+                const msgBuffer = new TextEncoder().encode(message);
+                const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            }
+        } catch (e) {
+            console.warn('Crypto subtle unavailable, using fallback comparison');
+        }
+        return message;
     }
 
     // Default Seed Data to guarantee immediate availability
@@ -551,10 +558,13 @@
             const inputHash = await sha256(password);
             
             // Authorized accounts verification
-            const isAdminEmail = (emailOrUsername.toLowerCase() === 'admin@capitalcirclelaw.com' || emailOrUsername.toLowerCase() === 'admin');
+            const cleanUser = (emailOrUsername || '').toLowerCase().trim();
+            const isAdminEmail = (cleanUser === 'admin@capitalcirclelaw.com' || cleanUser === 'admin');
             const expectedHash = '3d95118c23b91ea3d34ec64f8a2935fa03af673cc90bace78e72b8615b13f45a'; // SHA-256 for CapitalCircle2026!Admin
 
-            if (isAdminEmail && inputHash === expectedHash) {
+            const isPasswordValid = (inputHash === expectedHash || password === 'CapitalCircle2026!Admin');
+
+            if (isAdminEmail && isPasswordValid) {
                 const session = {
                     email: 'admin@capitalcirclelaw.com',
                     username: 'admin',

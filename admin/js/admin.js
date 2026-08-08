@@ -11,16 +11,29 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Check Auth Status unless on login page
-    const isLoginPage = window.location.pathname.includes('login.html') || window.location.pathname.includes('/admin/login');
+    const isLoginPage = window.location.pathname.includes('login') || window.location.pathname.includes('login.html');
     const session = DB.getAdminSession();
 
     if (!session && !isLoginPage) {
-        window.location.href = 'login.html';
+        let path = window.location.pathname;
+        if (path.includes('.html')) {
+            const currentFileName = path.substring(path.lastIndexOf('/') + 1);
+            window.location.href = path.replace(currentFileName, 'login.html');
+        } else {
+            window.location.href = 'login.html';
+        }
         return;
     }
 
     if (session && isLoginPage) {
-        window.location.href = 'index.html';
+        let path = window.location.pathname;
+        if (path.includes('login.html')) {
+            window.location.href = path.replace('login.html', 'index.html');
+        } else if (path.endsWith('/login')) {
+            window.location.href = path.replace('/login', '/index.html');
+        } else {
+            window.location.href = 'index.html';
+        }
         return;
     }
 
