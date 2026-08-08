@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Management | Capital Circle CMS Admin</title>
+    
+    <!-- Google Fonts & Quill Rich Text Editor CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-brand">
+                    <span class="sidebar-brand-title">CAPITAL CIRCLE</span>
+                    <span class="sidebar-brand-sub">ADMINISTRATION</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">MAIN CONTROLS</div>
+                <a href="index.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="articles.html" class="sidebar-link active">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    <span>Articles</span>
+                </a>
+                <a href="team.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <span>Team Members</span>
+                </a>
+                <a href="content.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <span>Website Content</span>
+                </a>
+                <a href="media.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    <span>Media Library</span>
+                </a>
+                <a href="inquiries.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span>Inquiries</span>
+                </a>
+
+                <div class="nav-section-label">SYSTEM</div>
+                <a href="activity.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <span>Activity Audit</span>
+                </a>
+                <a href="settings.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>Website Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="admin-user-info">
+                    <div class="admin-avatar" id="adminUserAvatar">A</div>
+                    <div class="admin-user-details">
+                        <span class="admin-name" id="adminUserName">Administrator</span>
+                        <span class="admin-role">Super Admin</span>
+                    </div>
+                </div>
+                <button class="logout-btn" id="adminLogoutBtn" title="Logout">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <div class="topbar-left">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                    </button>
+                    <div class="page-title-breadcrumb">
+                        <h1 class="page-title">Articles & Publications</h1>
+                        <span class="page-breadcrumb">Manage Legal Insights & Blog Content</span>
+                    </div>
+                </div>
+
+                <div class="topbar-actions">
+                    <button id="openNewArticleBtn" class="btn btn-primary">
+                        <span>+ Add Article</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="admin-content-body">
+                
+                <div class="admin-card">
+                    <div class="card-header">
+                        <div class="toolbar-grid" style="margin-bottom: 0; width: 100%;">
+                            <div class="search-input-wrapper">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                <input type="text" id="articleSearchInput" class="form-control" placeholder="Search by title or author...">
+                            </div>
+
+                            <select id="articleCategoryFilter" class="select-control">
+                                <option value="all">All Categories</option>
+                                <option value="Constitutional & Media Law">Constitutional & Media Law</option>
+                                <option value="Financial Frauds">Financial Frauds</option>
+                                <option value="White Collar Crimes">White Collar Crimes</option>
+                                <option value="Insolvency & Restructuring">Insolvency & Restructuring</option>
+                                <option value="Corporate Governance">Corporate Governance</option>
+                            </select>
+
+                            <select id="articleStatusFilter" class="select-control">
+                                <option value="all">All Statuses</option>
+                                <option value="published">Published Only</option>
+                                <option value="draft">Drafts Only</option>
+                            </select>
+
+                            <select id="articleSortFilter" class="select-control">
+                                <option value="newest">Newest First</option>
+                                <option value="oldest">Oldest First</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="card-body" style="padding: 0;">
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Article Details</th>
+                                        <th>Category</th>
+                                        <th>Author</th>
+                                        <th>Pub. Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="articlesTbody">
+                                    <tr><td colspan="6" style="text-align: center; color: var(--admin-text-dark); padding: 32px;">Loading article database...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- ADD / EDIT ARTICLE MODAL -->
+    <div class="admin-modal-backdrop" id="articleModal">
+        <div class="admin-modal-dialog modal-dialog-large">
+            <div class="modal-dialog-header">
+                <h3 class="modal-dialog-title" id="articleModalTitle">Add New Article</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+
+            <form id="articleForm">
+                <input type="hidden" id="artId">
+
+                <div class="modal-dialog-body">
+                    <div class="form-group">
+                        <label for="artTitle">Article Title *</label>
+                        <input type="text" id="artTitle" required placeholder="Enter article headline...">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="artSlug">URL Slug *</label>
+                            <input type="text" id="artSlug" required placeholder="e.g. censorship-and-freedom-of-expression">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="artCategory">Category *</label>
+                            <select id="artCategory" required>
+                                <option value="Constitutional & Media Law">Constitutional & Media Law</option>
+                                <option value="Financial Frauds">Financial Frauds</option>
+                                <option value="White Collar Crimes">White Collar Crimes</option>
+                                <option value="Insolvency & Restructuring">Insolvency & Restructuring</option>
+                                <option value="Corporate Governance">Corporate Governance</option>
+                                <option value="Startup Advisory">Startup Advisory</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="artAuthor">Author Name *</label>
+                            <input type="text" id="artAuthor" required value="Capital Circle Law Offices">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="artPubDate">Publication Date *</label>
+                            <input type="date" id="artPubDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="artImageFile">Featured Image (Upload to Cloudinary or Enter URL)</label>
+                        <input type="file" id="artImageFile" accept="image/*" style="margin-bottom: 8px;">
+                        <input type="text" id="artImageUrl" placeholder="Or paste image URL (e.g. assets/hero-legal-art.png)">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Full Article Body Content (Rich Text Editor) *</label>
+                        <div id="artQuillEditor"></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="artTags">Tags (Comma Separated)</label>
+                            <input type="text" id="artTags" placeholder="e.g. Free Speech, Article 19(1)(a), CBFC">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="artStatus">Publishing Status *</label>
+                            <select id="artStatus">
+                                <option value="published">Published</option>
+                                <option value="draft">Save as Draft</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="artSeoTitle">SEO Meta Title</label>
+                        <input type="text" id="artSeoTitle" placeholder="Custom browser tab title...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="artSeoDesc">SEO Meta Description</label>
+                        <textarea id="artSeoDesc" rows="2" placeholder="Search engine snippet..."></textarea>
+                    </div>
+                </div>
+
+                <div class="modal-dialog-footer">
+                    <button type="button" class="btn btn-secondary modal-close-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Article Record</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- DELETE CONFIRMATION MODAL -->
+    <div class="admin-modal-backdrop" id="deleteConfirmModal">
+        <div class="admin-modal-dialog" style="max-width: 440px;">
+            <div class="modal-dialog-header">
+                <h3 class="modal-dialog-title">Confirm Article Deletion</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-dialog-body">
+                <p style="color: var(--admin-text-main); font-size: 14px; margin-bottom: 12px;">
+                    Are you sure you want to delete this article?
+                </p>
+                <p style="color: var(--admin-text-dark); font-size: 12px;">
+                    The article will be soft-deleted and removed from the public website immediately.
+                </p>
+            </div>
+            <div class="modal-dialog-footer">
+                <button type="button" class="btn btn-secondary modal-close-btn">Cancel</button>
+                <button type="button" id="confirmDeleteBtn" class="btn btn-danger">Confirm Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="../js/db.js"></script>
+    <script src="js/admin.js"></script>
+    <script>
+        let quill;
+        let activeDeleteArticleId = null;
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const DB = window.CapitalCircleDB;
+            if (!DB) return;
+
+            // Initialize Quill Rich Text Editor
+            quill = new Quill('#artQuillEditor', {
+                theme: 'snow',
+                modules: {
+                    toolbar: [
+                        [{ 'header': [1, 2, 3, false] }],
+                        ['bold', 'italic', 'underline', 'blockquote'],
+                        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                        ['link', 'clean']
+                    ]
+                }
+            });
+
+            // Set default date to today
+            document.getElementById('artPubDate').valueAsDate = new Date();
+
+            // Auto-generate slug from title
+            document.getElementById('artTitle').addEventListener('input', (e) => {
+                const slugInput = document.getElementById('artSlug');
+                if (!slugInput.dataset.manual) {
+                    slugInput.value = e.target.value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                }
+            });
+            document.getElementById('artSlug').addEventListener('input', () => {
+                document.getElementById('artSlug').dataset.manual = 'true';
+            });
+
+            // Load and render articles
+            async function renderArticles() {
+                const search = document.getElementById('articleSearchInput').value;
+                const category = document.getElementById('articleCategoryFilter').value;
+                const status = document.getElementById('articleStatusFilter').value;
+                const sortBy = document.getElementById('articleSortFilter').value;
+
+                const articles = await DB.getArticles({ includeDeleted: false, search, category, status, sortBy });
+                const tbody = document.getElementById('articlesTbody');
+
+                if (articles.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; color: var(--admin-text-dark); padding: 32px;">No matching articles found.</td></tr>`;
+                    return;
+                }
+
+                tbody.innerHTML = articles.map(art => `
+                    <tr>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <img src="${art.featured_image || '../assets/hero-legal-art.png'}" class="article-thumb" alt="Thumb">
+                                <div>
+                                    <strong style="color: #ffffff; font-size: 14px; display: block;">${art.title}</strong>
+                                    <span style="font-size: 11px; color: var(--admin-text-dark);">/blog.html?slug=${art.slug}</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span style="color: var(--admin-gold); font-size: 12px; font-weight: 600;">${art.category}</span></td>
+                        <td>${art.author}</td>
+                        <td>${art.publication_date}</td>
+                        <td><span class="badge badge-${art.status}">${art.status}</span></td>
+                        <td>
+                            <div style="display: flex; gap: 6px;">
+                                <button class="btn btn-secondary btn-sm edit-art-btn" data-id="${art.id}">Edit</button>
+                                <button class="btn btn-danger btn-sm delete-art-btn" data-id="${art.id}">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                `).join('');
+
+                // Attach button event listeners
+                document.querySelectorAll('.edit-art-btn').forEach(btn => {
+                    btn.addEventListener('click', () => editArticle(btn.dataset.id));
+                });
+                document.querySelectorAll('.delete-art-btn').forEach(btn => {
+                    btn.addEventListener('click', () => promptDeleteArticle(btn.dataset.id));
+                });
+            }
+
+            // Filter event listeners
+            document.getElementById('articleSearchInput').addEventListener('input', renderArticles);
+            document.getElementById('articleCategoryFilter').addEventListener('change', renderArticles);
+            document.getElementById('articleStatusFilter').addEventListener('change', renderArticles);
+            document.getElementById('articleSortFilter').addEventListener('change', renderArticles);
+
+            // Open New Article Modal
+            document.getElementById('openNewArticleBtn').addEventListener('click', () => {
+                document.getElementById('articleModalTitle').innerText = 'Add New Article';
+                document.getElementById('articleForm').reset();
+                document.getElementById('artId').value = '';
+                document.getElementById('artPubDate').valueAsDate = new Date();
+                delete document.getElementById('artSlug').dataset.manual;
+                quill.root.innerHTML = '';
+                openModal('articleModal');
+            });
+
+            // Edit Article Handler
+            async function editArticle(id) {
+                const articles = await DB.getArticles({ includeDeleted: true });
+                const art = articles.find(a => a.id === id);
+                if (!art) return;
+
+                document.getElementById('articleModalTitle').innerText = 'Edit Article';
+                document.getElementById('artId').value = art.id;
+                document.getElementById('artTitle').value = art.title;
+                document.getElementById('artSlug').value = art.slug;
+                document.getElementById('artSlug').dataset.manual = 'true';
+                document.getElementById('artCategory').value = art.category || 'Constitutional & Media Law';
+                document.getElementById('artAuthor').value = art.author || 'Capital Circle Law Offices';
+                document.getElementById('artPubDate').value = art.publication_date || new Date().toISOString().split('T')[0];
+                document.getElementById('artImageUrl').value = art.featured_image || '';
+                document.getElementById('artTags').value = art.tags || '';
+                document.getElementById('artStatus').value = art.status || 'published';
+                document.getElementById('artSeoTitle').value = art.seo_title || '';
+                document.getElementById('artSeoDesc').value = art.seo_description || '';
+                
+                quill.root.innerHTML = art.content || '';
+                openModal('articleModal');
+            }
+
+            // Prompt Delete
+            function promptDeleteArticle(id) {
+                activeDeleteArticleId = id;
+                openModal('deleteConfirmModal');
+            }
+
+            // Confirm Delete Action
+            document.getElementById('confirmDeleteBtn').addEventListener('click', async () => {
+                if (activeDeleteArticleId) {
+                    await DB.deleteArticle(activeDeleteArticleId);
+                    showToast('Article deleted successfully', 'success');
+                    closeModal('deleteConfirmModal');
+                    activeDeleteArticleId = null;
+                    renderArticles();
+                }
+            });
+
+            // Form Submit (Save Article)
+            document.getElementById('articleForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                let imageUrl = document.getElementById('artImageUrl').value.trim();
+                const imageFile = document.getElementById('artImageFile').files[0];
+
+                if (imageFile) {
+                    showToast('Uploading image to Cloudinary...', 'info');
+                    imageUrl = await uploadToCloudinary(imageFile);
+                }
+
+                const articleData = {
+                    id: document.getElementById('artId').value || null,
+                    title: document.getElementById('artTitle').value.trim(),
+                    slug: document.getElementById('artSlug').value.trim(),
+                    category: document.getElementById('artCategory').value,
+                    author: document.getElementById('artAuthor').value.trim(),
+                    publication_date: document.getElementById('artPubDate').value,
+                    featured_image: imageUrl || 'assets/hero-legal-art.png',
+                    content: quill.root.innerHTML,
+                    tags: document.getElementById('artTags').value.trim(),
+                    status: document.getElementById('artStatus').value,
+                    seo_title: document.getElementById('artSeoTitle').value.trim(),
+                    seo_description: document.getElementById('artSeoDesc').value.trim(),
+                    is_deleted: false
+                };
+
+                await DB.saveArticle(articleData);
+                showToast('Article saved successfully', 'success');
+                closeModal('articleModal');
+                renderArticles();
+            });
+
+            // Initial render
+            renderArticles();
+        });
+    </script>
+</body>
+</html>

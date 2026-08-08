@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team & Advocate Management | Capital Circle CMS Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-brand">
+                    <span class="sidebar-brand-title">CAPITAL CIRCLE</span>
+                    <span class="sidebar-brand-sub">ADMINISTRATION</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">MAIN CONTROLS</div>
+                <a href="index.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="articles.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    <span>Articles</span>
+                </a>
+                <a href="team.html" class="sidebar-link active">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <span>Team Members</span>
+                </a>
+                <a href="content.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <span>Website Content</span>
+                </a>
+                <a href="media.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    <span>Media Library</span>
+                </a>
+                <a href="inquiries.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span>Inquiries</span>
+                </a>
+
+                <div class="nav-section-label">SYSTEM</div>
+                <a href="activity.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <span>Activity Audit</span>
+                </a>
+                <a href="settings.html" class="sidebar-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>Website Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="admin-user-info">
+                    <div class="admin-avatar" id="adminUserAvatar">A</div>
+                    <div class="admin-user-details">
+                        <span class="admin-name" id="adminUserName">Administrator</span>
+                        <span class="admin-role">Super Admin</span>
+                    </div>
+                </div>
+                <button class="logout-btn" id="adminLogoutBtn" title="Logout">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <div class="topbar-left">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                    </button>
+                    <div class="page-title-breadcrumb">
+                        <h1 class="page-title">Team & Advocate Management</h1>
+                        <span class="page-breadcrumb">Manage Lawyers, Partners & Firm Members</span>
+                    </div>
+                </div>
+
+                <div class="topbar-actions">
+                    <button id="openNewTeamBtn" class="btn btn-primary">
+                        <span>+ Add Team Member</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="admin-content-body">
+                <div class="admin-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Firm Advocates & Managing Partners</h2>
+                    </div>
+                    <div class="card-body" style="padding: 0;">
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Advocate / Member</th>
+                                        <th>Designation</th>
+                                        <th>Order</th>
+                                        <th>Visibility</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="teamTbody">
+                                    <tr><td colspan="5" style="text-align: center; color: var(--admin-text-dark); padding: 32px;">Loading team directory...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ADD / EDIT TEAM MEMBER MODAL -->
+    <div class="admin-modal-backdrop" id="teamModal">
+        <div class="admin-modal-dialog">
+            <div class="modal-dialog-header">
+                <h3 class="modal-dialog-title" id="teamModalTitle">Add Team Member</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+
+            <form id="teamForm">
+                <input type="hidden" id="teamId">
+
+                <div class="modal-dialog-body">
+                    <div class="form-group">
+                        <label for="teamName">Full Name *</label>
+                        <input type="text" id="teamName" required placeholder="e.g. Adv. Yeshwanth Thandra">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="teamDesignation">Designation / Title *</label>
+                        <input type="text" id="teamDesignation" required placeholder="e.g. Founder & Managing Partner">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="teamImageFile">Profile Photo (Upload to Cloudinary or Enter URL)</label>
+                        <input type="file" id="teamImageFile" accept="image/*" style="margin-bottom: 8px;">
+                        <input type="text" id="teamImageUrl" placeholder="Or paste image URL (e.g. assets/founder.png)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="teamBio">Professional Bio & Credentials *</label>
+                        <textarea id="teamBio" rows="4" required placeholder="Detail the advocate's practice experience and qualifications..."></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="teamSortOrder">Display Order (Numeric)</label>
+                            <input type="number" id="teamSortOrder" value="1" min="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="teamActive">Visibility Status</label>
+                            <select id="teamActive">
+                                <option value="true">Active (Visible on Website)</option>
+                                <option value="false">Hidden / Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-dialog-footer">
+                    <button type="button" class="btn btn-secondary modal-close-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Member Profile</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- DELETE TEAM CONFIRM MODAL -->
+    <div class="admin-modal-backdrop" id="deleteTeamModal">
+        <div class="admin-modal-dialog" style="max-width: 440px;">
+            <div class="modal-dialog-header">
+                <h3 class="modal-dialog-title">Confirm Team Member Deletion</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-dialog-body">
+                <p style="color: var(--admin-text-main); font-size: 14px; margin-bottom: 8px;">
+                    Are you sure you want to delete this team member?
+                </p>
+                <p style="color: var(--admin-text-dark); font-size: 12px;">
+                    This advocate will be removed from the firm directory and website.
+                </p>
+            </div>
+            <div class="modal-dialog-footer">
+                <button type="button" class="btn btn-secondary modal-close-btn">Cancel</button>
+                <button type="button" id="confirmDeleteTeamBtn" class="btn btn-danger">Confirm Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/db.js"></script>
+    <script src="js/admin.js"></script>
+    <script>
+        let activeDeleteTeamId = null;
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const DB = window.CapitalCircleDB;
+            if (!DB) return;
+
+            async function renderTeam() {
+                const members = await DB.getTeamMembers({ includeInactive: true, includeDeleted: false });
+                const tbody = document.getElementById('teamTbody');
+
+                if (members.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: var(--admin-text-dark); padding: 32px;">No team members found.</td></tr>`;
+                    return;
+                }
+
+                tbody.innerHTML = members.map(m => `
+                    <tr>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <img src="${m.image_url || '../assets/founder.png'}" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;" alt="${m.name}">
+                                <div>
+                                    <strong style="color: #ffffff; font-size: 14px; display: block;">${m.name}</strong>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span style="color: var(--admin-gold); font-weight: 600;">${m.designation}</span></td>
+                        <td>${m.sort_order || 1}</td>
+                        <td>
+                            <span class="badge ${m.is_active ? 'badge-published' : 'badge-draft'}">
+                                ${m.is_active ? 'Active' : 'Hidden'}
+                            </span>
+                        </td>
+                        <td>
+                            <div style="display: flex; gap: 6px;">
+                                <button class="btn btn-secondary btn-sm edit-team-btn" data-id="${m.id}">Edit</button>
+                                <button class="btn btn-danger btn-sm delete-team-btn" data-id="${m.id}">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                `).join('');
+
+                document.querySelectorAll('.edit-team-btn').forEach(btn => {
+                    btn.addEventListener('click', () => editMember(btn.dataset.id));
+                });
+                document.querySelectorAll('.delete-team-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        activeDeleteTeamId = btn.dataset.id;
+                        openModal('deleteTeamModal');
+                    });
+                });
+            }
+
+            document.getElementById('openNewTeamBtn').addEventListener('click', () => {
+                document.getElementById('teamModalTitle').innerText = 'Add Team Member';
+                document.getElementById('teamForm').reset();
+                document.getElementById('teamId').value = '';
+                openModal('teamModal');
+            });
+
+            async function editMember(id) {
+                const members = await DB.getTeamMembers({ includeInactive: true, includeDeleted: true });
+                const m = members.find(item => item.id === id);
+                if (!m) return;
+
+                document.getElementById('teamModalTitle').innerText = 'Edit Team Member';
+                document.getElementById('teamId').value = m.id;
+                document.getElementById('teamName').value = m.name;
+                document.getElementById('teamDesignation').value = m.designation;
+                document.getElementById('teamImageUrl').value = m.image_url;
+                document.getElementById('teamBio').value = m.description;
+                document.getElementById('teamSortOrder').value = m.sort_order || 1;
+                document.getElementById('teamActive').value = m.is_active ? 'true' : 'false';
+
+                openModal('teamModal');
+            }
+
+            document.getElementById('confirmDeleteTeamBtn').addEventListener('click', async () => {
+                if (activeDeleteTeamId) {
+                    await DB.deleteTeamMember(activeDeleteTeamId);
+                    showToast('Team member deleted successfully', 'success');
+                    closeModal('deleteTeamModal');
+                    activeDeleteTeamId = null;
+                    renderTeam();
+                }
+            });
+
+            document.getElementById('teamForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                let imgUrl = document.getElementById('teamImageUrl').value.trim();
+                const file = document.getElementById('teamImageFile').files[0];
+                if (file) {
+                    showToast('Uploading photo to Cloudinary...', 'info');
+                    imgUrl = await uploadToCloudinary(file);
+                }
+
+                const memberData = {
+                    id: document.getElementById('teamId').value || null,
+                    name: document.getElementById('teamName').value.trim(),
+                    designation: document.getElementById('teamDesignation').value.trim(),
+                    image_url: imgUrl || 'assets/founder.png',
+                    description: document.getElementById('teamBio').value.trim(),
+                    sort_order: parseInt(document.getElementById('teamSortOrder').value, 10) || 1,
+                    is_active: document.getElementById('teamActive').value === 'true',
+                    is_deleted: false
+                };
+
+                await DB.saveTeamMember(memberData);
+                showToast('Team member saved successfully', 'success');
+                closeModal('teamModal');
+                renderTeam();
+            });
+
+            renderTeam();
+        });
+    </script>
+</body>
+</html>

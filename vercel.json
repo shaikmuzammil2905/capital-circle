@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/admin", "destination": "/admin/index.html" },
+    { "source": "/admin/login", "destination": "/admin/login.html" },
+    { "source": "/admin/articles", "destination": "/admin/articles.html" },
+    { "source": "/admin/team", "destination": "/admin/team.html" },
+    { "source": "/admin/content", "destination": "/admin/content.html" },
+    { "source": "/admin/media", "destination": "/admin/media.html" },
+    { "source": "/admin/inquiries", "destination": "/admin/inquiries.html" },
+    { "source": "/admin/settings", "destination": "/admin/settings.html" },
+    { "source": "/admin/activity", "destination": "/admin/activity.html" },
+    { "source": "/blog/:slug", "destination": "/blog.html?slug=:slug" }
+  ]
+}
